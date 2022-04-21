@@ -1,0 +1,18 @@
+{% extends "szablon.html" %}
+
+{% block tytul %}Główna{% endblock %}
+
+{% block zawartosc %}
+<h1>Wypełnij ankiete</h1>
+
+Formularz:
+<form method="post" novalidate>
+    {% csrf_token %}
+    <ul>
+        {{ form.as_ul }}
+    </ul>
+    <input type="submit" value="Wyślij">
+    <input type="reset" value="Resetuj">
+</form>
+
+{% endblock %}

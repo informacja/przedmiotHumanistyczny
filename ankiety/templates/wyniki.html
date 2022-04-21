@@ -1,0 +1,28 @@
+{% extends "szablon.html" %}
+
+{% block tytul %}Wyniki{% endblock %}
+
+{% block zawartosc %}
+    <h1>Wyniki</h1>
+
+    <table class="table">
+        <tr>
+            <th>LP</th>
+            <th>ID</th>
+            <th>WIEK</th>
+            <th>PŁEĆ</th>
+            <th>WYKSZTAŁCENIE</th>
+        </tr>
+
+        {% for odp in odpowiedzi %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ odp.id }}</td>
+                <td>{{ odp.wiek }}</td>
+                <td>{{ odp.plec|capfirst }}</td>
+                <td>{{ odp.wyksztalcenie }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
