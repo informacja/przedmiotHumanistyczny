@@ -1,5 +1,6 @@
 # przedmiotHumanistyczny
 Piotr Wawryka - mam dostęp 😉
+
 Paulina Armatys - mam dostęp :)
 
 
