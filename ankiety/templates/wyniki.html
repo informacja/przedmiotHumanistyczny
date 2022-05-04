@@ -12,6 +12,7 @@
             <th>WIEK</th>
             <th>PŁEĆ</th>
             <th>WYKSZTAŁCENIE</th>
+<!--            <th>CLS</th>-->
         </tr>
 
         {% for odp in odpowiedzi %}
@@ -21,6 +22,7 @@
                 <td>{{ odp.wiek }}</td>
                 <td>{{ odp.plec|capfirst }}</td>
                 <td>{{ odp.wyksztalcenie }}</td>
+<!--                <td>{{ odp.Czy_lubisz_szczepienia }}</td>-->
             </tr>
         {% endfor %}
     </table>

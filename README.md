@@ -10,4 +10,9 @@ Piotr Wawryka - mam dostęp 😉
 In virtual env path bin
 ```pycon
 source activate 
+
+ ./manage.py makemigrations
+
+./manage.py migrate
+
 ```
