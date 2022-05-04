@@ -7,4 +7,9 @@ Piotr Wawryka - mam dostęp 😉
 ](https://coggle.it/diagram/YjJaPpSuTY1a8qlK/t/-/46b7d7b22533779b390d4c019bfad0a10cd6c236efacd7278e49eda5b7cdcc83)
 
 delete file
+
 <img width="288" alt="image" src="https://user-images.githubusercontent.com/22752828/166803036-110ce2db-57cf-48f4-8b46-f88bae15d051.png">
+
+Radio/multiselect 
+
+<img width="644" alt="image" src="https://user-images.githubusercontent.com/22752828/166812266-13dbdb46-9971-4430-8ca6-ff5418e1e076.png">
