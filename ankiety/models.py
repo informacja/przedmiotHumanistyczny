@@ -11,4 +11,4 @@ class Odpowiedz(models.Model):
         (1, 'Podstawowe'),
         (2, 'Średnie'),
         (3, 'Wyższe'),
-    ])
+    ]) 
