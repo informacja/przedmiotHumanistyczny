@@ -8,8 +8,23 @@
 Formularz:
 <form method="post" novalidate>
     {% csrf_token %}
-    <ul>
-        {{ form.as_ul }}
+    <ul id="0">
+        {{ form0.as_ul }}
+    </ul>
+    <ul id="1">
+        {{ form1.as_ul }}
+    </ul>
+    <ul id="2">
+        {{ form2.as_ul }}
+    </ul>
+    <ul id="3">
+        {{ form3.as_ul }}
+    </ul>
+    <ul id="4">
+        {{ form4.as_ul }}
+    </ul>
+    <ul id="5">
+        {{ form5.as_ul }}
     </ul>
     <input type="submit" value="Wyślij">
     <input type="reset" value="Resetuj">

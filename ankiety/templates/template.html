@@ -3,9 +3,10 @@
 <!doctype html>
 {% include "head.inc.html" %}
 <body>
-{% for contact in page_obj %}
+{% for odpowiedz in page_obj %}
+text
     {# Each "contact" is a Contact model object. #}
-    {{ contact.full_name|upper }}<br>
+    {{ odpowiedz.wiek|upper }}<br>
     ...
 {% endfor %}
 

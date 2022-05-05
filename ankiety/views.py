@@ -1,6 +1,11 @@
 from django.shortcuts import redirect, render
 from django.views.generic import ListView
-from ankiety.forms import Formularz
+from ankiety.forms import Formularz0
+from ankiety.forms import Formularz1
+from ankiety.forms import Formularz2
+from ankiety.forms import Formularz3
+from ankiety.forms import Formularz4
+from ankiety.forms import Formularz5
 from ankiety.models import Odpowiedz
 from django.core.paginator import Paginator
 
@@ -20,18 +25,27 @@ def home(request):
     return render(request, 'home.html', {
     })
 
-
 def wypelnij(request):
     print('GET:', request.GET)
     print('POST:', request.POST)
 
     if request.method == 'GET':
-        form = Formularz(initial={
+        form0 = Formularz0()
+        form1 = Formularz1()
+        form2 = Formularz2()
+        form3 = Formularz3()
+        form4 = Formularz4()
+        form5 = Formularz5(initial={
             'wiek': 20
         })
     else:
-        form = Formularz(request.POST)
-        if form.is_valid():
+        form0 = Formularz1(request.POST)
+        form1 = Formularz1(request.POST)
+        form2 = Formularz1(request.POST)
+        form3 = Formularz1(request.POST)
+        form4 = Formularz1(request.POST)
+        form5 = Formularz1(request.POST)
+        if form0.is_valid() and form1.is_valid() and form2.is_valid() and form3.is_valid() and form4.is_valid() and form5.is_valid():
             print('Hura!')
 
             # odp = Odpowiedz()
@@ -39,11 +53,21 @@ def wypelnij(request):
             # odp.plec = form.cleaned_data['plec']
             # odp.wyksztalcenie = form.cleaned_data['wyksztalcenie']
             # odp.save()
-            form.save()
+            form0.save()
+            form1.save()
+            form2.save()
+            form3.save()
+            form4.save()
+            form5.save()
             return redirect('dziekuje')
 
     return render(request, 'wypelnij.html', {
-        'form': form
+        'form0': form0,
+        'form1': form1,
+        'form2': form2,
+        'form3': form3,
+        'form4': form4,
+        'form5': form5
     })
 
 
