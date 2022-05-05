@@ -44,13 +44,13 @@ class Formularz0(models.ModelForm):  # Przykładowy formularz
 
 class Formularz1(models.ModelForm):
 
-    Jak_oceniasz_swój_stosunek_do_szczepień_innych_niż_na_Covid = forms.MultipleChoiceField(choices=[
+    Jak_oceniasz_swój_stosunek_do_szczepień_innych_niż_na_Covid = forms.ChoiceField(choices=[
         ('1', 'zdecydowanie negatywny'),
         ('2', 'raczej negatywny'),
         ('3', 'neutralny'),
         ('4', 'raczej pozytywny'),
-         ('5', 'zdecydowanie pozytywny'),
-    ])
+        ('5', 'zdecydowanie pozytywny'),
+    ],widget=forms.RadioSelect)
     #
     # Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień? = forms.ChoiceField(choices=[
     #     (1, 'tak'),
