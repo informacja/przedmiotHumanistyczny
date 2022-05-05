@@ -1,8 +1,20 @@
 from django.shortcuts import redirect, render
-
+from django.views.generic import ListView
 from ankiety.forms import Formularz
 from ankiety.models import Odpowiedz
+from django.core.paginator import Paginator
 
+class OdpowiedzListView(ListView):
+    paginate_by = 2
+    model = Odpowiedz
+
+def listing(request):
+    contact_list = Odpowiedz.objects.all()
+    paginator = Paginator(contact_list, 25) # Show 25 contacts per page.
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'template.html', {'page_obj': page_obj})
 
 def home(request):
     return render(request, 'home.html', {
