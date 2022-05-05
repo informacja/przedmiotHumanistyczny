@@ -43,8 +43,151 @@ class Formularz0(models.ModelForm):  # Przykładowy formularz
         return color
 
 class Formularz1(models.ModelForm):
-    wiek = forms.IntegerField(min_value=18)
 
+    Jak_oceniasz_swój_stosunek_do_szczepień_innych_niż_na_Covid = forms.MultipleChoiceField(choices=[
+        ('1', 'zdecydowanie negatywny'),
+        ('2', 'raczej negatywny'),
+        ('3', 'neutralny'),
+        ('4', 'raczej pozytywny'),
+         ('5', 'zdecydowanie pozytywny'),
+    ])
+    #
+    # Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie pamiętam'),
+    # ])
+    #
+    # Przeciw_jakim_chorobom_obowiązkowym_byłeś_szczepiona/y? = forms.MultipleChoiceField(choices=[
+    #     (1, 'Wirusowe zapalenie wątroby typu B (WZW B)'),
+    #     (2, 'Błonica'),
+    #     (3, 'Gruźlica');
+    #     (4, 'Tężec'),
+    #     (5, 'Krztusiec (koklusz)'),
+    #     (6, 'Polio (IPV)'),
+    #     (7, 'Pałeczka hemofilna typu B (Hib)'),
+    #     (8, 'Pneumokoki (PCV)'),
+    #     (9, 'Odra'),
+    #     (10, 'Świnka'),
+    #     (11, 'Różyczka'),
+    #     (12, 'Inne (podaj jakie) (pole do wpisywania)'),
+    #     (13, 'Nie mam możliwości sprawdzenia'),
+    # ])
+    #
+    # Czy_kiedykolwiek_przyjmowałaś/eś_szczepienia_nieobowiązkowe,_ale_zalecane? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie pamiętam'),
+    # ])
+
+    # Przeciw_jakim_chorobom_nieobowiązkowym_a_zalecanym_byłeś_szczepiona/y? = forms.MultipleChoiceField(choices=[
+    #     (1, 'Rotawirusy'),
+    #     (2, 'Grypa'),
+    #     (3, 'Meningokoki'),
+    #     (4, 'Ospa wietrzna'),
+    #     (5, 'Wirusowe zapalenie wątroby typu A (WZW A)'),
+    #     (6, 'Odkleszczowe zapalenie mózgu'),
+    #     (7, 'Inne z wyjątkiem Covid  (podaj jakie) (pole do wpisania)'),
+    #     (8, 'Nie mam możliwości sprawdzenia'),
+    # ])
+
+    # Czy_rekomendujesz_szczepienie_innym?  = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie wiem'),
+    # ])
+
+    # Czy_w_przeszłości_doświadczyłaś/łeś_skutków_niepożądanych_przyjęcia_szczepionki? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie pamiętam'),
+    # ])
+
+    # Jeśli_tak,_to_jakich? = forms.MultipleChoiceField(choices=[
+    #     (1, 'Gorączka'),
+    #     (2, 'Zmęczenie, złe samopoczucie'),
+    #     (3, 'Ból głowy'),
+    #     (4, 'Ból mięśni'),
+    #     (5, 'Ból stawów'),
+    #     (6, 'Dreszcze'),
+    #     (7, 'Dolegliwości ze strony układu pokarmowego (biegunka, mdłości, ból brzucha)'),
+    #     (8, 'Ból w miejscu wstrzyknięcia/opuchlizna/zaczerwienienie w miejscu wstrzyknięcia'),
+    #     (9, 'Nadmierne pocenie się'),
+    #     (10, 'Swędzenie skóry lub wysypka'),
+    #     (11, 'Powiększone węzły chłonne'),
+    #     (12, 'Uczucie omdlenia lub oszołomienia'),
+    #     (13, 'Trudności z oddychaniem'),
+    #     (14, 'Świszczący oddech'),
+    #     (15, 'Opuchlizna twarzy i gardła'),
+    #     (16, 'Przyspieszenie akcji serca'),
+    #     (17, 'Inne, jakie? (pole do wpisania)'),
+    # ])
+
+    # Czy_doświadczone_skutki_uboczne_zmieniły_twój_stosunek_do_szczepień? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie wiem'),
+    # ])
+
+    # Czy_rekomendujesz_szczepienie_innym_mimo_doświadczonych_skutków_ubocznych? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie wiem'),
+    # ])
+
+    # Szczepenia dzieci
+
+    # Czy_posiadasz_dzieci? = forms.ChoiceField(choices=[
+    #     (1, 'tak'),
+    #     (2, 'Nie'),
+    # ])
+
+    # W_jakim_wieku_jest_Twoje_dziecko_(jeśli_posiadasz_więcej_niż_jedno,_zaznacz_wiek_najstarszego)? = forms.ChoiceField(choices=[
+    #     (1, '0-3'),
+    #     (2, '4-9'),
+    #     (2, '10-14'),
+    #     (2, '15-19'),
+    # ])
+
+    # Czy_szczepiłaś/łeś_lub_zamierzasz_zaszczepić_je_zgodnie_z_kalendarzem_szczepień_wszystkimi_obowiązkowymi_szczepionkami? = forms.ChoiceField(choices=[
+    #     (1, 'Tak'),
+    #     (2, 'Nie'),
+    #     (3, 'Nie wiem'),
+    # ])
+
+    # Przec_wjakim_chorobom_z_szczepień_obowiązkowych_szczepiłaś/łeś_swoje_dzieci? = forms.MultipleChoiceField(choices=[
+    #     (1, 'Wirusowe zapalenie wątroby typu B (WZW B)'),
+    #     (2, 'Błonica'),
+    #     (3, 'Gruźlica');
+    #     (4, 'Tężec'),
+    #     (5, 'Krztusiec (koklusz)'),
+    #     (6, 'Polio (IPV)'),
+    #     (7, 'Pałeczka hemofilna typu B (Hib)'),
+    #     (8, 'Pneumokoki (PCV)'),
+    #     (9, 'Odra'),
+    #     (10, 'Świnka'),
+    #     (11, 'Różyczka'),
+    #     (12, 'Inne (podaj jakie) (pole do wpisywania)'),
+    #     (13, 'Nie mam możliwości sprawdzenia'),
+    # ])
+
+    # Czy_szczepiłaś/eś/_lub_zamierzasz_zaszczepić_je_zalecanymi_szczepionkami_nieobowiązkowymi? = forms.ChoiceField(choices=[
+    #     (1, 'Tak, szczepiłam/em'),
+    #     (2, 'Nie, ale mam zamiar'),
+    #     (3, 'Nie i nie mam zamiaru'),
+    #     (4, 'Nie wiem'),
+    # ])
+
+    # Przeciw_jakim_chorobom_zalecanym_szczepiłaś/łeś_lub_chcesz_zaszczepić_swoje_dziecko?  = forms.MultipleChoiceField(choices=[
+    #     (1, 'Rotawirusy'),
+    #     (2, 'Grypa'),
+    #     (3, 'Meningokoki'),
+    #     (4, 'Ospa wietrzna'),
+    #     (5, 'Wirusowe zapalenie wątroby typu A (WZW A)'),
+    #     (6, 'Odkleszczowe zapalenie mózgu'),
+    #     (7, 'Inne z wyjątkiem Covid  (podaj jakie) (pole do wpisania)'),
+    #     (8, 'Nie mam możliwości sprawdzenia'),
+    # ])
 
     class Meta:
         model = Odpowiedz
@@ -96,151 +239,6 @@ class Formularz5(models.ModelForm):
 
     #Dopisane/nie sprawdzone - po kolei jak w arkuszach
 
-    #Jak_oceniasz_swój_stosunek_do_szczepień_(innych_niż_na_Covid) = forms.MultipleChoiceField(choices=[
-    #     ('1', 'zdecydowanie negatywny'),
-    #     ('2', 'raczej negatywny'),
-    #     ('3', 'neutralny'),
-    #     ('4', 'raczej pozytywny'),
-    #      ('5', 'zdecydowanie pozytywny'),
-    # ])
-
-    #Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie pamiętam'),
-    # ])
-
-    #Przeciw_jakim_chorobom_obowiązkowym_byłeś_szczepiona/y? = forms.MultipleChoiceField(choices=[
-    #     (1, 'Wirusowe zapalenie wątroby typu B (WZW B)'),
-    #     (2, 'Błonica'),
-    #     (3, 'Gruźlica');
-    #     (4, 'Tężec'),
-    #     (5, 'Krztusiec (koklusz)'),
-    #     (6, 'Polio (IPV)'),
-    #     (7, 'Pałeczka hemofilna typu B (Hib)'),
-    #     (8, 'Pneumokoki (PCV)'),
-    #     (9, 'Odra'),
-    #     (10, 'Świnka'),
-    #     (11, 'Różyczka'),
-    #     (12, 'Inne (podaj jakie) (pole do wpisywania)'),
-    #     (13, 'Nie mam możliwości sprawdzenia'),
-    # ])
-
-    #Czy_kiedykolwiek_przyjmowałaś/eś_szczepienia_nieobowiązkowe,_ale_zalecane? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie pamiętam'),
-    # ])
-    
-    #Przeciw_jakim_chorobom_nieobowiązkowym_a_zalecanym_byłeś_szczepiona/y? = forms.MultipleChoiceField(choices=[
-    #     (1, 'Rotawirusy'),
-    #     (2, 'Grypa'),
-    #     (3, 'Meningokoki'),
-    #     (4, 'Ospa wietrzna'),
-    #     (5, 'Wirusowe zapalenie wątroby typu A (WZW A)'),
-    #     (6, 'Odkleszczowe zapalenie mózgu'),
-    #     (7, 'Inne z wyjątkiem Covid  (podaj jakie) (pole do wpisania)'),
-    #     (8, 'Nie mam możliwości sprawdzenia'),
-    # ])
-
-    #Czy_rekomendujesz_szczepienie_innym?  = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie wiem'),
-    # ])
-
-    #Czy_w_przeszłości_doświadczyłaś/łeś_skutków_niepożądanych_przyjęcia_szczepionki? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie pamiętam'),
-    # ])
-
-    #Jeśli_tak,_to_jakich? = forms.MultipleChoiceField(choices=[
-    #     (1, 'Gorączka'),
-    #     (2, 'Zmęczenie, złe samopoczucie'),
-    #     (3, 'Ból głowy'),
-    #     (4, 'Ból mięśni'),
-    #     (5, 'Ból stawów'),
-    #     (6, 'Dreszcze'),
-    #     (7, 'Dolegliwości ze strony układu pokarmowego (biegunka, mdłości, ból brzucha)'),
-    #     (8, 'Ból w miejscu wstrzyknięcia/opuchlizna/zaczerwienienie w miejscu wstrzyknięcia'),
-    #     (9, 'Nadmierne pocenie się'),
-    #     (10, 'Swędzenie skóry lub wysypka'),
-    #     (11, 'Powiększone węzły chłonne'),
-    #     (12, 'Uczucie omdlenia lub oszołomienia'),
-    #     (13, 'Trudności z oddychaniem'),
-    #     (14, 'Świszczący oddech'),
-    #     (15, 'Opuchlizna twarzy i gardła'),
-    #     (16, 'Przyspieszenie akcji serca'),
-    #     (17, 'Inne, jakie? (pole do wpisania)'),
-    # ])
-
-    #Czy_doświadczone_skutki_uboczne_zmieniły_twój_stosunek_do_szczepień? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie wiem'),
-    # ])
-
-   #Czy_rekomendujesz_szczepienie_innym_mimo_doświadczonych_skutków_ubocznych? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie wiem'),
-    # ]) 
-	
-
-    #Szczepenia dzieci
-
-    #Czy_posiadasz_dzieci? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    # ]) 
-
-    #W_jakim_wieku_jest_Twoje_dziecko_(jeśli_posiadasz_więcej_niż_jedno,_zaznacz_wiek_najstarszego)? = forms.ChoiceField(choices=[
-    #     (1, '0-3'),
-    #     (2, '4-9'),
-    #     (2, '10-14'),
-    #     (2, '15-19'),
-    # ])
-
-    #Czy_szczepiłaś/łeś_lub_zamierzasz_zaszczepić_je_zgodnie_z_kalendarzem_szczepień_wszystkimi_obowiązkowymi_szczepionkami? = forms.ChoiceField(choices=[
-    #     (1, 'Tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie wiem'),
-    # ]) 
-
-    #Przec_wjakim_chorobom_z_szczepień_obowiązkowych_szczepiłaś/łeś_swoje_dzieci? = forms.MultipleChoiceField(choices=[
-    #     (1, 'Wirusowe zapalenie wątroby typu B (WZW B)'),
-    #     (2, 'Błonica'),
-    #     (3, 'Gruźlica');
-    #     (4, 'Tężec'),
-    #     (5, 'Krztusiec (koklusz)'),
-    #     (6, 'Polio (IPV)'),
-    #     (7, 'Pałeczka hemofilna typu B (Hib)'),
-    #     (8, 'Pneumokoki (PCV)'),
-    #     (9, 'Odra'),
-    #     (10, 'Świnka'),
-    #     (11, 'Różyczka'),
-    #     (12, 'Inne (podaj jakie) (pole do wpisywania)'),
-    #     (13, 'Nie mam możliwości sprawdzenia'),
-    # ])
-
-    #Czy_szczepiłaś/eś/_lub_zamierzasz_zaszczepić_je_zalecanymi_szczepionkami_nieobowiązkowymi? = forms.ChoiceField(choices=[
-    #     (1, 'Tak, szczepiłam/em'),
-    #     (2, 'Nie, ale mam zamiar'),
-    #     (3, 'Nie i nie mam zamiaru'),
-    #     (4, 'Nie wiem'),
-    # ])
-
-    #Przeciw_jakim_chorobom_zalecanym_szczepiłaś/łeś_lub_chcesz_zaszczepić_swoje_dziecko?  = forms.MultipleChoiceField(choices=[
-    #     (1, 'Rotawirusy'),
-    #     (2, 'Grypa'),
-    #     (3, 'Meningokoki'),
-    #     (4, 'Ospa wietrzna'),
-    #     (5, 'Wirusowe zapalenie wątroby typu A (WZW A)'),
-    #     (6, 'Odkleszczowe zapalenie mózgu'),
-    #     (7, 'Inne z wyjątkiem Covid  (podaj jakie) (pole do wpisania)'),
-    #     (8, 'Nie mam możliwości sprawdzenia'),
-    # ])
 
     #Szczepienie przeciw COVID-19
 
