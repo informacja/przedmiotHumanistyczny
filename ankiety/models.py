@@ -1,6 +1,8 @@
 from django.db import models
 
 from django.forms import SelectMultiple
+from django.views.generic import ListView
+
 
 class Odpowiedz(models.Model):
     wiek = models.IntegerField()
@@ -19,8 +21,9 @@ class Odpowiedz(models.Model):
         (2, 'Średnio'),
         (3, 'Nie ufam'),
     ])
+    geeks_field = models.TextField()
 
-    # gender = forms.ChoiceField(choices=[
+     # gender = forms.ChoiceField(choices=[
     #     (1, 'Lubię'),
     #     (2, 'Średnio')
     # ], widget=forms.RadioSelect)

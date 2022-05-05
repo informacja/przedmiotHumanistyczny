@@ -45,3 +45,4 @@ def wyniki(request):
 
 def dziekuje(request):
     return render(request, 'dziekuje.html')
+
