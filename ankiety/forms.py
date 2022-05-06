@@ -12,7 +12,7 @@ class Formularz0(models.ModelForm):  # Przykładowy formularz
     Jakie_jest_twoje_zaufanie_do_szczepien = forms.ChoiceField(choices=[
         (1,"lubię"),
         (2,"Nie ufam"),
-    ], widget=forms.RadioSelect)
+    ], widget=forms.RadioSelect, label='Imię')
 
     COLORS = (
         ('R', 'Red'),
