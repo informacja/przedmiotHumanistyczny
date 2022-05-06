@@ -1,5 +1,6 @@
-{% extends "szablon.html" %}
+{#% extends "szablon.html" %#}
 
+{% load static %}
 {% block tytul %}Wyniki{% endblock %}
 
 {% block zawartosc %}
@@ -21,4 +22,17 @@
                 <input type="email" id="form3Example3" class="form-control" />
                 <label class="form-label" for="form3Example3">Email address</label>
               </div>
+
+<style>
+   body{
+	   background-image: url('{% static 'ankiety/media/dziekujemy.png' %}');
+   margin: 0;
+       /*height: 100%;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   }
+
+</style>
 {% endblock %}
+
