@@ -10,7 +10,7 @@
 <p class="tx">Dziękujemy za poświęcony czas i wypełnienie ankiety </p>
 <p class="authors">Paulina Armatys, Patrycja Gaćkowska, Gabriela Markowicz, Anna Marszałek, Piotr Wawryka, Roksana Zielińska </p>
 <p class="btn bt" >
-			<a class="btn redText"  href="wypelnij/" itemprop="url" >
+			<a class="btn txtBtn"  href="wypelnij/" itemprop="url" >
 			<span class="icon-chevron-right"   aria-hidden="true"></span>
         Wypełnij ponownie	</a>
 	</p>
@@ -80,8 +80,8 @@ top: 227px;
 }
 .tx {
 	position: static;
-width: 740px;
-height: 192px;
+width: 900px;
+/*height: 192px;*/
 left: calc(50% - 740px/2);
 top: calc(50% - 192px/2 - 76px);
 
@@ -101,23 +101,7 @@ flex: none;
 order: 0;
 align-self: stretch;
 flex-grow: 0;
-/*margin: 85px 0px;*/
-    /*position: absolute;*/
-    /*width: 740px;*/
-    /*height: 192px;*/
-    /*!*left: calc(50% - 740px / 2 - 490px);*!*/
-    /*top: calc(50% - 192px / 2);*/
 
-    /*font-family: 'Poppins';*/
-    /*font-style: normal;*/
-    /*font-weight: 700;*/
-    /*font-size: 64px;*/
-    /*line-height: 96px;*/
-
-    /*color: #063689;*/
-
-    /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
-	/*margin-left: 100;*/
 }
 .authors{
 
@@ -126,7 +110,6 @@ flex-grow: 0;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
-padding: 10px;
 
 position: static;
 width: 638px;
@@ -141,6 +124,39 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 85px 0px;
+	position: static;
+width: 618px;
+height: 144px;
+left: 10px;
+top: 10px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 48px;
+
+color: #4671C6;
+
+
+/* Inside auto layout */
+
+/*flex: none;*/
+/*order: 0;*/
+/*flex-grow: 0;*/
+/*margin: 0px 10px;*/
+}
+.btnTxt{
+	position: static;
+width: 419px;
+height: 65px;
+left: calc(50% - 419px/2);
+top: calc(50% - 65px/2);
+
+background: #4671C6;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 101px;
+
 }
     /* Component 1 */
 .bt {
@@ -174,6 +190,16 @@ flex-grow: 0;
     /*height: 65px;*/
     /*left: 100px;*/
     /*bottom: 1vh;*/
+	position: static;
+width: 419px;
+height: 65px;
+left: calc(50% - 419px/2);
+top: calc(50% - 65px/2);
+
+background: #4671C6;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 101px;
+
 }
 
 /*.edit.item-page .btn-toolbar .btn, .pager.pagenav a, p.readmore .btn, .contact .form-actions .btn, #contact-form .controls .btn-primary.validate, .profile .btn, .login .btn, .logout .btn, .registration .btn, .profile-edit .btn, .remind .btn, .reset .btn, .search #searchForm .btn, .search #search-form .btn, .finder #searchForm .btn, .finder #search-form .btn {*/
