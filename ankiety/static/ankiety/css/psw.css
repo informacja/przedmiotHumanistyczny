@@ -1,5 +1,22 @@
 li::marker {
-  color: blue;
-  font-size: 1.2em;
-  content: "🧡 ";
+  content: "";
+}
+
+li {
+  counter-increment: li;
+  display: list-item;
+}
+
+ ul.main>li::marker {
+  display: list-item;
+  content: "#" counter(li) " ";
+  color: lightsalmon;
+  font-weight: bold;
+}
+
+body {
+  counter-reset: li;
+  /*line-height: 1.4;*/
+  /*font-family: system-ui;*/
+  margin: 3rem;
 }

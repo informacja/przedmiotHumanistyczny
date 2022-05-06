@@ -12,35 +12,35 @@ Formularz:
 
 <div id="myDIV">
   This is my DIV element.
-    <label>
-  <input type="radio" name="test" value="small" checked>
-  <img src="https://via.placeholder.com/40x60/0bf/fff&text=A">
-</label>
+<!--    <label>-->
+<!--  <input type="radio" name="test" value="small" checked>-->
+<!--  <img src="https://via.placeholder.com/40x60/0bf/fff&text=A">-->
+<!--</label>-->
 
-<label>
-  <input type="radio" name="test" value="big">
-  <img src="https://via.placeholder.com/40x60/b0f/fff&text=B">
-</label>
+<!--<label>-->
+<!--  <input type="radio" name="test" value="big">-->
+<!--  <img src="https://via.placeholder.com/40x60/b0f/fff&text=B">-->
+<!--</label>-->
     <ul id="0">
         {{ form0.as_ul }}
     </ul>
 </div>
-    <ul id="1">
+    <ul id="1" class="main">
         <h2 class="naglowek">Historia szczepień<br>
             <span>Nie dotyczy szczepienia na COVID - 19</span>
         </h2>
         {{ form1.as_ul }}
     </ul>
-    <ul id="2">
+    <ul id="2"class="main">
         {{ form2.as_ul }}
     </ul>
-    <ul id="3">
+    <ul id="3"class="main">
         {{ form3.as_ul }}
     </ul>
-    <ul id="4">
+    <ul id="4"class="main">
         {{ form4.as_ul }}
     </ul>
-    <ul id="5">
+    <ul id="5"class="main">
         {{ form5.as_ul }}
     </ul>
     <input type="submit" value="Wyślij">

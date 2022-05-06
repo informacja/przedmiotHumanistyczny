@@ -4,7 +4,7 @@ from django.db import models
 # from django.views.generic import ListView
 
 class Odpowiedz(models.Model):
-    Nowy_formularz_z_modelu = models.TextField()
+    # Nowy_formularz_z_modelu = models.TextField()
     wiek = models.IntegerField()
 
     # geeks_field = models.TextField()
