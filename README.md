@@ -1,6 +1,7 @@
 # przedmiotHumanistyczny
 Piotr Wawryka - mam dostęp 😉
 
+Roksana Zielińska - mam dostęp :smile:
 
 [
  ![Zrzut ekranu 2022-03-16 o 22 46 43](https://user-images.githubusercontent.com/22752828/158696722-6f55509c-f677-4c64-8432-9cf6170ca751.png)
