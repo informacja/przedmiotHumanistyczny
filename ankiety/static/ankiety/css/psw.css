@@ -2,7 +2,7 @@ li::marker {
   content: "";
 }
 
-li {
+ ul.main>li {
   counter-increment: li;
   display: list-item;
 }
