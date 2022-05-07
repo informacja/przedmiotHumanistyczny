@@ -8,7 +8,7 @@ from django.forms import models
 class Formularz0(models.ModelForm):  # Przykładowy formularz
 
     name = forms.CharField()
-    wiek = forms.IntegerField(min_value=18)
+    wiek = forms.IntegerField(min_value=18,)
     Jakie_jest_twoje_zaufanie_do_szczepien = forms.ChoiceField(choices=[
         (1,"lubię"),
         (2,"Nie ufam"),
@@ -51,7 +51,7 @@ class Formularz1(models.ModelForm):
         ('4', 'raczej pozytywny'),
         ('5', 'zdecydowanie pozytywny'),
     ],widget=forms.RadioSelect)
-    #
+
     # Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień? = forms.ChoiceField(choices=[
     #     (1, 'tak'),
     #     (2, 'Nie'),
