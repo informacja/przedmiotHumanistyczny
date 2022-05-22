@@ -39,12 +39,12 @@ def wypelnij(request):
             'wiek': 20
         })
     else:
-        form0 = Formularz1(request.POST)
+        form0 = Formularz0(request.POST)
         form1 = Formularz1(request.POST)
-        form2 = Formularz1(request.POST)
-        form3 = Formularz1(request.POST)
-        form4 = Formularz1(request.POST)
-        form5 = Formularz1(request.POST)
+        form2 = Formularz2(request.POST)
+        form3 = Formularz3(request.POST)
+        form4 = Formularz4(request.POST)
+        form5 = Formularz5(request.POST)
         if form0.is_valid() and form1.is_valid() and form2.is_valid() and form3.is_valid() and form4.is_valid() and form5.is_valid():
             print('Hura!')
 
@@ -52,13 +52,15 @@ def wypelnij(request):
             # odp.wiek = form.cleaned_data['wiek']
             # odp.plec = form.cleaned_data['plec']
             # odp.wyksztalcenie = form.cleaned_data['wyksztalcenie']
-            # odp.save()
+
             form0.save()
             form1.save()
             form2.save()
             form3.save()
             form4.save()
             form5.save()
+            # odp.form0 =
+            # odp.save()
             return redirect('dziekuje')
 
     return render(request, 'wypelnij.html', {

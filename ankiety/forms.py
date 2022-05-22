@@ -50,13 +50,13 @@ class Formularz1(models.ModelForm):
         ('3', 'neutralny'),
         ('4', 'raczej pozytywny'),
         ('5', 'zdecydowanie pozytywny'),
-    ],widget=forms.RadioSelect)
+    ],widget=forms.RadioSelect, label="Jak_oceniasz_swój_stosunek_do_szczepień_innych_niż_na_Covid")
 
-    # Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień? = forms.ChoiceField(choices=[
-    #     (1, 'tak'),
-    #     (2, 'Nie'),
-    #     (3, 'Nie pamiętam'),
-    # ])
+    w = forms.ChoiceField(choices=[
+        (1, 'tak'),
+        (2, 'Nie'),
+        (3, 'Nie pamiętam')
+    ],label="Czy_byłaś/eś_szczepiona/y_zgodnie_z_kalendarzem_szczepień?")
     #
     # Przeciw_jakim_chorobom_obowiązkowym_byłeś_szczepiona/y? = forms.MultipleChoiceField(choices=[
     #     (1, 'Wirusowe zapalenie wątroby typu B (WZW B)'),

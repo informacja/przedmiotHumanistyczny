@@ -10,13 +10,13 @@ Paulina Armatys - mam dostęp :)
 ### Used commands
 In virtual env path bin
 ```pycon
+cd ~/PycharmProjects/djangoProject/venv/bin/
 source activate 
-
+cd ~/Documents/GitHub/przedmiotHumanistyczny
 ```
+
 Po zmianie w modelu
 ```pycon
 ./manage.py makemigrations
-
 ./manage.py migrate
-
 ```

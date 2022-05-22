@@ -2,10 +2,11 @@
 
 {% block tytul %}Główna{% endblock %}
 
+{% load static %}
 {% block zawartosc %}
-<h1>Wypełnij ankiete</h1>
+<!--<h1>Wypełnij ankiete</h1>-->
 
-Formularz:
+<!--Formularz:-->
 <form method="post" novalidate id="form">
     {% csrf_token %}
     <button onclick="myFunction(); return false;">Click Me</button>
@@ -29,25 +30,39 @@ Formularz:
         <h2 class="naglowek">Historia szczepień<br>
             <span>Nie dotyczy szczepienia na COVID - 19</span>
         </h2>
+        {{form1.0}} test
         {{ form1.as_ul }}
         <div class="recBtn" onclick="page(2); return false;"><span class="btTxt">Następna</span></div>
     </ul>
     <ul id="2"class="main">
+        <h2 class="naglowek">Szczepienia dzieci</h2>
         {{ form2.as_ul }}
         <div class="recBtn" onclick="page(1); return false;"><span class="btTxt">Cofnij</span></div>
-        <div class="recBtn" onclick="page(2); return false;"><span class="btTxt">Następna</span></div>
+        <div class="recBtn" onclick="page(3); return false;"><span class="btTxt">Następna</span></div>
     </ul>
     <ul id="3"class="main">
+        <h2 class="naglowek">Szczepienie przeciw COVID - 19</h2>
         {{ form3.as_ul }}
+        <div class="recBtn" onclick="page(2); return false;"><span class="btTxt">Cofnij</span></div>
+        <div class="recBtn" onclick="page(4); return false;"><span class="btTxt">Następna</span></div>
     </ul>
     <ul id="4"class="main">
+        <h2 class="naglowek">Szczepienia przyszłe</h2>
         {{ form4.as_ul }}
+        <div class="recBtn" onclick="page(3); return false;"><span class="btTxt">Cofnij</span></div>
+        <div class="recBtn" onclick="page(5); return false;"><span class="btTxt">Następna</span></div>
     </ul>
     <ul id="5"class="main">
+        <h2 class="naglowek">Metryczka</h2>
         {{ form5.as_ul }}
+        <div class="recBtn" onclick="page(4); return false;"><span class="btTxt">Cofnij</span></div>
+        <input class="recBtn" type="submit" onclick="showAllNoButtons(); return false;"><span class="btTxt">
+
+<!--        <input type="submit" value="Wyślij">-->
+            Zapisz</span></input>
     </ul>
-    <input type="submit" value="Wyślij">
-    <input type="reset" value="Resetuj">
+<!--    <input type="submit" value="Wyślij">-->
+<!--    <input type="reset" value="Resetuj">-->
 </form>
 
 <script>
@@ -73,6 +88,10 @@ Formularz:
         }
         const ulNr = document.getElementById(nr);
         ulNr.style.display = "block";
+        const body = document.getElementsByName("body");
+
+        body.style.backgroundImage= url('{% static 'ankiety/media/dziekujemy.png' %}');
+                console.log(body);
 
     }
     // show pagee nuber (4)

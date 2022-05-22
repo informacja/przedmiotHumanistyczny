@@ -4,8 +4,11 @@ from django.db import models
 # from django.views.generic import ListView
 
 class Odpowiedz(models.Model):
+    n = True;
+    # form
+    # user = models.OneToOneField("User", related_name='profile', primary_key=True)
     # Nowy_formularz_z_modelu = models.TextField()
-    wiek = models.IntegerField()
+    # wiek = models.IntegerField()
 
     # geeks_field = models.TextField()
     # wyksztalcenie = models.IntegerField(choices=[
